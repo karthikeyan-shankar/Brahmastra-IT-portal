@@ -1,0 +1,638 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * BRAHMASTRA design system — mythic astra weapon x circuitry.
+ * Dark void base, ember-saffron energy, plasma-cyan tech accent.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ember: var(--ember);
+  --color-plasma: var(--plasma);
+  --color-astra: var(--astra);
+  --font-display: "Bebas Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-ui:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", system-ui,
+    sans-serif;
+
+}
+
+:root {
+  --radius: 1.25rem;
+
+  /* Obsidian & Crimson: near-black base, crimson energy, warm ash accents */
+  --background: oklch(0.09 0.006 20);
+  --foreground: oklch(0.98 0.004 20);
+  --card: oklch(1 0 0 / 0.08);
+  --card-foreground: oklch(0.98 0.004 20);
+  --popover: oklch(0.19 0.012 20 / 0.94);
+  --popover-foreground: oklch(0.98 0.004 20);
+
+  --primary: oklch(0.58 0.20 25);
+  --primary-foreground: oklch(0.99 0.005 20);
+  --secondary: oklch(1 0 0 / 0.10);
+  --secondary-foreground: oklch(0.98 0.004 20);
+  --muted: oklch(1 0 0 / 0.08);
+  --muted-foreground: oklch(0.85 0.012 20);
+  --accent: oklch(0.82 0.12 34);
+  --accent-foreground: oklch(0.17 0.01 20);
+  --destructive: oklch(0.58 0.20 25);
+  --destructive-foreground: oklch(0.99 0.005 20);
+  --border: oklch(1 0 0 / 0.14);
+  --input: oklch(1 0 0 / 0.14);
+  --ring: oklch(0.82 0.12 34);
+
+  --ember: oklch(0.60 0.20 25);
+  --plasma: oklch(0.84 0.11 34);
+  --astra: oklch(0.72 0.17 28);
+
+  --gradient-astra: linear-gradient(115deg, var(--plasma), oklch(0.98 0.01 40) 42%, var(--ember));
+  --gradient-void:
+    radial-gradient(ellipse at 18% 0%, oklch(0.45 0.16 25 / 0.22), transparent 55%),
+    radial-gradient(ellipse at 88% 8%, oklch(0.38 0.14 35 / 0.15), transparent 48%),
+    radial-gradient(ellipse at 50% 112%, oklch(0.26 0.10 20 / 0.30), transparent 60%),
+    radial-gradient(ellipse at 6% 95%, oklch(0.30 0.08 25 / 0.14), transparent 55%);
+  --shadow-ember:
+    inset 0 1px 0 0 oklch(1 0 0 / 0.34), 0 14px 44px -16px oklch(0.58 0.20 25 / 0.60);
+  --shadow-plasma:
+    inset 0 1px 0 0 oklch(1 0 0 / 0.28), 0 12px 34px -18px oklch(0 0 0 / 0.75);
+  --shadow-glass:
+    inset 0 1px 0 0 oklch(1 0 0 / 0.30), inset 0 -1px 0 0 oklch(1 0 0 / 0.09),
+    0 20px 55px -24px oklch(0 0 0 / 0.80);
+
+}
+
+
+
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    background-image: var(--gradient-void);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ---------- lightweight themed utilities ---------- */
+
+@utility text-astra {
+  background-image: var(--gradient-astra);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility grid-circuit {
+  background-image:
+    linear-gradient(to right, oklch(1 0 0 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(1 0 0 / 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 50% 30%, black 10%, transparent 75%);
+}
+
+/*
+ * Slow aurora orbs behind the glass. Three huge soft blobs drift in opposite
+ * directions. Pure CSS background-position animation, no JS, no canvas.
+ */
+@utility aurora-drift {
+  background-image:
+    radial-gradient(60vw 60vw at 20% 30%, oklch(0.60 0.20 25 / 0.34), transparent 70%),
+    radial-gradient(55vw 55vw at 80% 20%, oklch(0.55 0.16 35 / 0.26), transparent 70%),
+    radial-gradient(70vw 70vw at 60% 85%, oklch(0.45 0.14 20 / 0.30), transparent 70%),
+    radial-gradient(45vw 45vw at 15% 80%, oklch(0.50 0.12 25 / 0.22), transparent 70%);
+  background-size: 150% 150%;
+  animation: aurora-move 60s ease-in-out infinite alternate;
+  opacity: 1;
+}
+
+@keyframes aurora-move {
+  0% {
+    background-position:
+      0% 0%,
+      100% 0%,
+      50% 100%,
+      0% 100%;
+  }
+  100% {
+    background-position:
+      100% 100%,
+      0% 100%,
+      100% 0%,
+      100% 0%;
+  }
+}
+
+/* Very soft star points — mostly static, extremely light. */
+@utility starfield {
+  background-image:
+    radial-gradient(1.2px 1.2px at 18% 22%, oklch(1 0 0 / 0.55), transparent 60%),
+    radial-gradient(1.0px 1.0px at 74% 12%, oklch(1 0 0 / 0.42), transparent 60%),
+    radial-gradient(1.4px 1.4px at 42% 68%, oklch(1 0 0 / 0.38), transparent 60%),
+    radial-gradient(0.9px 0.9px at 88% 54%, oklch(0.88 0.12 196 / 0.45), transparent 60%),
+    radial-gradient(1.1px 1.1px at 8% 78%, oklch(1 0 0 / 0.32), transparent 60%),
+    radial-gradient(0.9px 0.9px at 62% 88%, oklch(1 0 0 / 0.28), transparent 60%);
+  background-size: 340px 340px, 520px 520px, 420px 420px, 600px 600px, 480px 480px, 380px 380px;
+  animation: star-drift 120s linear infinite;
+  opacity: 0.55;
+}
+
+@keyframes star-drift {
+  to {
+    background-position:
+      340px 0, -520px 0, 420px 0, -600px 0, 480px 0, -380px 0;
+  }
+}
+
+
+
+/*
+ * Apple-style glass: translucent pane with a strong blur so the aurora behind
+ * shows through the card. One blur layer only, no heavy stacking.
+ */
+@utility panel {
+  position: relative;
+  isolation: isolate;
+  /* almost clear: the background reads straight through the pane */
+  background-color: oklch(1 0 0 / 0.015);
+  background-image:
+    linear-gradient(
+      165deg,
+      oklch(1 0 0 / 0.10),
+      oklch(1 0 0 / 0.02) 30%,
+      oklch(1 0 0 / 0) 65%,
+      oklch(1 0 0 / 0.05)
+    );
+  backdrop-filter: blur(9px) saturate(165%) brightness(1.12);
+  border: 0.5px solid oklch(1 0 0 / 0.26);
+  border-radius: 1.75rem;
+  box-shadow:
+    /* thin bright lips = glass edge, not a filled card */
+    inset 0 1px 0 0 oklch(1 0 0 / 0.55),
+    inset 0 -1px 0 0 oklch(1 0 0 / 0.26),
+    inset 1px 0 0 0 oklch(1 0 0 / 0.12),
+    inset -1px 0 0 0 oklch(1 0 0 / 0.12),
+    inset 0 12px 24px -22px oklch(1 0 0 / 0.4),
+    0 14px 34px -22px oklch(0 0 0 / 0.55);
+}
+
+/* Caustic rim light + edge refraction — the specular that sells thick glass. */
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(120% 50% at 10% -12%, oklch(1 0 0 / 0.13), transparent 58%),
+    radial-gradient(90% 45% at 98% 112%, oklch(1 0 0 / 0.08), transparent 62%),
+    linear-gradient(90deg, oklch(1 0 0 / 0.08), transparent 5%, transparent 95%, oklch(1 0 0 / 0.08));
+  mix-blend-mode: screen;
+}
+
+
+
+
+
+
+/* Apple SF-style text for small info, labels and rules */
+@utility text-ui {
+  font-family: var(--font-ui);
+  letter-spacing: -0.01em;
+}
+
+/*
+ * Colored event card: tinted glass base, no constant glow.
+ * Glows only on interaction via the card-glow pseudo-element.
+ * --card-color is set inline per event.
+ */
+@utility card-tint {
+  position: relative;
+  isolation: isolate;
+  background-color: color-mix(in oklab, var(--card-color) 10%, oklch(1 0 0 / 0.05));
+  background-image:
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--card-color) 14%, oklch(1 0 0 / 0.20)),
+      color-mix(in oklab, var(--card-color) 6%, oklch(1 0 0 / 0.06)) 30%,
+      oklch(1 0 0 / 0.015) 66%,
+      color-mix(in oklab, var(--card-color) 10%, oklch(1 0 0 / 0.10))
+    );
+  backdrop-filter: blur(22px) saturate(180%) brightness(1.08);
+  border: 0.5px solid oklch(1 0 0 / 0.26);
+  border-radius: 1.5rem;
+  box-shadow:
+    inset 0 1px 0 0 oklch(1 0 0 / 0.60),
+    inset 0 -1px 0 0 oklch(1 0 0 / 0.28),
+    inset 1px 0 0 0 oklch(1 0 0 / 0.14),
+    inset -1px 0 0 0 oklch(1 0 0 / 0.14),
+    inset 0 14px 28px -22px oklch(1 0 0 / 0.5),
+    inset 0 -20px 32px -26px color-mix(in oklab, var(--card-color) 30%, oklch(1 0 0 / 0.28)),
+    0 16px 40px -22px oklch(0 0 0 / 0.8);
+  transition: border-color 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+
+
+@utility card-glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.35s ease-out;
+  box-shadow: 0 0 0 1.5px color-mix(in oklab, var(--card-color) 90%, oklch(1 0 0 / 0.4)),
+    0 0 28px -8px color-mix(in oklab, var(--card-color) 75%, transparent);
+}
+
+.card-tint:is(:hover, :focus-within) .card-glow,
+.card-tint:is(:hover, :focus-within) {
+  border-color: color-mix(in oklab, var(--card-color) 80%, oklch(1 0 0 / 0.4));
+}
+
+.card-tint:is(:hover, :focus-within) .card-glow {
+  opacity: 1;
+}
+
+@utility glass-soft {
+  background-color: oklch(1 0 0 / 0.04);
+  background-image: linear-gradient(160deg, oklch(1 0 0 / 0.10), oklch(1 0 0 / 0.01) 60%);
+  backdrop-filter: blur(10px) saturate(150%);
+  border: 0.5px solid oklch(1 0 0 / 0.14);
+  box-shadow:
+    inset 0 0.5px 0 0 oklch(1 0 0 / 0.38),
+    inset 0 -0.5px 0 0 oklch(1 0 0 / 0.12);
+}
+
+@utility glass-primary {
+  background-color: color-mix(in oklab, var(--primary) 90%, transparent);
+  background-image: linear-gradient(
+    180deg,
+    oklch(1 0 0 / 0.34),
+    oklch(1 0 0 / 0.08) 45%,
+    oklch(0 0 0 / 0.08)
+  );
+  border: 0.5px solid oklch(1 0 0 / 0.35);
+  box-shadow: inset 0 1px 0 0 oklch(1 0 0 / 0.42);
+}
+
+/*
+ * Proximity specular: a single pseudo-element lit by --gx/--gy/--gi, driven by
+ * one rAF-throttled pointer listener. Only opacity/background-position change.
+ */
+@utility glass-live {
+  position: relative;
+  isolation: isolate;
+  --gx: 50%;
+  --gy: 50%;
+  --gi: 0;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@utility glass-live-sheen {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+  opacity: var(--gi);
+  transition: opacity 0.35s ease-out;
+  background: radial-gradient(
+    24rem 24rem at var(--gx) var(--gy),
+    oklch(1 0 0 / 0.22),
+    oklch(1 0 0 / 0.08) 42%,
+    transparent 70%
+  );
+}
+
+
+@utility glow-ember {
+  box-shadow: var(--shadow-ember);
+}
+
+@utility glow-plasma {
+  box-shadow: var(--shadow-plasma);
+}
+
+
+@utility rune-rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in oklab, var(--ember) 70%, transparent),
+    transparent
+  );
+}
+
+/* ---------- animations (GPU-cheap: transform + opacity only) ---------- */
+
+@keyframes astra-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes astra-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes astra-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes astra-scan {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(300%, 0, 0);
+  }
+}
+
+@utility anim-pulse-core {
+  animation: astra-pulse 4.5s ease-in-out infinite;
+}
+
+@utility anim-spin-slow {
+  animation: astra-spin 26s linear infinite;
+}
+
+@utility anim-spin-rev {
+  animation: astra-spin 38s linear infinite reverse;
+}
+
+@utility anim-rise {
+  animation: astra-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility anim-scan {
+  animation: astra-scan 3.2s linear infinite;
+}
+
+/* Tap/hover "sus" sweep across a card — one transform animation, no JS. */
+@keyframes sus-sweep {
+  from {
+    transform: translate3d(-120%, 0, 0) skewX(-14deg);
+  }
+  to {
+    transform: translate3d(320%, 0, 0) skewX(-14deg);
+  }
+}
+
+@utility sweep-host {
+  position: relative;
+  overflow: hidden;
+}
+
+.sweep-host::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 34%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    oklch(0.88 0.12 196 / 0.16) 40%,
+    oklch(1 0 0 / 0.10) 55%,
+    transparent
+  );
+  transform: translate3d(-120%, 0, 0) skewX(-14deg);
+}
+
+.sweep-host:is(:hover, :focus-within, :active)::before {
+  opacity: 1;
+  animation: sus-sweep 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- emblem: solid object treatment + new orbital motion ---------- */
+
+@keyframes emblem-float {
+  0%,
+  100% {
+    transform: translate3d(0, -3px, 0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0) rotate(1.5deg);
+  }
+}
+
+@keyframes halo-sweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ripple-out {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.55);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+/* the mark reads as a physical object with a strong themed glow */
+@utility emblem-solid {
+  animation: emblem-float 7s ease-in-out infinite;
+  filter:
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.65))
+    drop-shadow(0 12px 18px rgba(0, 0, 0, 0.65))
+    drop-shadow(0 0 28px color-mix(in oklab, var(--primary) 70%, transparent))
+    drop-shadow(0 0 56px color-mix(in oklab, var(--primary) 50%, transparent))
+    drop-shadow(0 0 96px color-mix(in oklab, var(--plasma) 38%, transparent));
+}
+
+/* rotating conic light sweep behind the mark */
+@utility emblem-halo {
+  animation: halo-sweep 18s linear infinite;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    color-mix(in oklab, var(--primary) 55%, transparent) 40deg,
+    transparent 110deg,
+    color-mix(in oklab, var(--plasma, var(--primary)) 40%, transparent) 200deg,
+    transparent 280deg
+  );
+  mask-image: radial-gradient(closest-side, transparent 46%, #000 58%, transparent 82%);
+  -webkit-mask-image: radial-gradient(closest-side, transparent 46%, #000 58%, transparent 82%);
+  filter: blur(6px);
+}
+
+@utility emblem-ripple {
+  animation: ripple-out 4.8s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emblem-solid,
+  .emblem-halo,
+  .emblem-ripple,
+  .core-ring,
+  .core-particle,
+  .anim-spin-slow {
+    animation: none;
+  }
+}
+
+/* ---------- energy core: glowing center, pulsing rings, orbiting particles ---------- */
+
+@keyframes core-pulse {
+  0% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes core-particle-orbit {
+  0% {
+    transform: rotate(0deg) translateX(var(--orbit-r)) rotate(var(--orbit-tilt));
+  }
+  100% {
+    transform: rotate(360deg) translateX(var(--orbit-r)) rotate(var(--orbit-tilt));
+  }
+}
+
+.core-ring {
+  animation: core-pulse 2.6s ease-out infinite;
+}
+
+.core-particle {
+  transform-origin: center;
+  cx: 100;
+  cy: 100;
+  animation: core-particle-orbit var(--orbit-duration, 18s) linear infinite;
+}
+
+
+/* ---------- mobile scroll performance ----------
+ * Touch devices repaint the whole viewport during momentum scroll. Full-page
+ * animated gradients + per-card backdrop-filter are the two expensive layers,
+ * so on coarse-pointer / small screens we keep the look but cut the cost:
+ * static aurora, one cheap blur, no blend-mode overlay.
+ */
+@media (hover: none), (max-width: 640px) {
+  .aurora-drift,
+  .starfield {
+    animation: none;
+  }
+
+  .panel,
+  .card-tint,
+  .glass-soft {
+    /* lighter blur = far cheaper per scrolled frame */
+    backdrop-filter: blur(6px) saturate(150%);
+    contain: paint;
+  }
+
+  /* mix-blend-mode forces an extra offscreen composite on every frame */
+  .panel::after {
+    mix-blend-mode: normal;
+    opacity: 0.7;
+  }
+
+  /* sheen is pointer-driven; no pointer on touch */
+  .glass-live-sheen {
+    display: none;
+  }
+
+  .sweep-host::before {
+    display: none;
+  }
+}
+
+/* Devices that cannot composite backdrop-filter cheaply still get glass-ish
+   fills instead of a transparent card. */
+@supports not (backdrop-filter: blur(1px)) {
+  .panel,
+  .card-tint,
+  .glass-soft {
+    background-color: oklch(0.22 0.02 20 / 0.72);
+  }
+}
