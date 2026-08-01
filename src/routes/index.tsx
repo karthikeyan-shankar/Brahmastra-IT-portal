@@ -110,7 +110,7 @@ function Index() {
         </header>
 
 
-        <div className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-2">
           {EVENTS.map((e, i) => (
             <EventCard key={e.id} event={e} index={i} />
           ))}

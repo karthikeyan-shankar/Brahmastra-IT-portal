@@ -9,18 +9,15 @@ export function EventCard({ event, index }: { event: BrahmastraEvent; index: num
   return (
     <PixelCard
       variant="aurora"
-      className="panel sweep-host anim-rise relative overflow-hidden outline-none"
+      className="panel sweep-host anim-rise relative overflow-hidden outline-none flex flex-col h-full"
       style={{ animationDelay: `${Math.min(index, 6) * 70}ms` } as React.CSSProperties}
     >
-      <div className="relative h-1 overflow-hidden bg-white/5">
+      <div className="relative h-1 shrink-0 overflow-hidden bg-white/5">
         <div className="anim-scan h-full w-1/3 bg-gradient-to-r from-transparent via-accent to-transparent" />
       </div>
 
-
-
-
-      <div className="p-4 sm:p-5">
-        <div className="flex items-start justify-between gap-3">
+      <div className="p-4 sm:p-5 flex flex-col flex-1">
+        <div className="flex items-start justify-between gap-3 shrink-0">
           <div className="min-w-0">
             <h3 className="truncate text-2xl tracking-wide text-white">{event.name}</h3>
             <p className="text-ui mt-0.5 text-[15px] leading-snug text-white/70">{event.tagline}</p>
@@ -30,15 +27,15 @@ export function EventCard({ event, index }: { event: BrahmastraEvent; index: num
           </span>
         </div>
 
-        <dl className="mt-4 grid grid-cols-3 gap-2 text-center">
+        <dl className="mt-4 grid grid-cols-3 gap-2 text-center shrink-0">
           {[
             ["Team", event.team],
             ["Time", event.duration],
             ["Prize", event.prize],
           ].map(([k, v]) => (
-            <div key={k} className="glass-soft rounded-2xl px-2 py-2">
+            <div key={k} className="glass-soft flex h-full flex-col items-center justify-center rounded-2xl px-2 py-2">
               <dt className="text-ui text-[11px] font-medium text-white/60">{k}</dt>
-              <dd className="text-ui mt-0.5 text-[15px] font-semibold text-white">{v}</dd>
+              <dd className="text-ui mt-0.5 text-sm font-semibold leading-tight text-white">{v}</dd>
             </div>
           ))}
         </dl>
@@ -47,7 +44,7 @@ export function EventCard({ event, index }: { event: BrahmastraEvent; index: num
           type="button"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
-          className="text-ui mt-3 flex w-full items-center justify-center gap-1 text-[15px] font-medium text-accent transition-colors hover:text-primary"
+          className="text-ui mt-3 flex w-full shrink-0 items-center justify-center gap-1 text-[15px] font-medium text-accent transition-colors hover:text-primary"
         >
           {open ? "Hide rules" : "Rules"}
           <ChevronDown
@@ -56,7 +53,7 @@ export function EventCard({ event, index }: { event: BrahmastraEvent; index: num
         </button>
 
         <div
-          className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+          className={`grid shrink-0 transition-[grid-template-rows] duration-300 ease-out ${
             open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
           }`}
         >
@@ -84,7 +81,7 @@ export function EventCard({ event, index }: { event: BrahmastraEvent; index: num
           href={event.formUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-ui glass-primary mt-4 flex h-11 items-center justify-center rounded-2xl text-[13px] font-bold uppercase tracking-[0.18em] text-primary-foreground transition-transform active:scale-[0.98]"
+          className="text-ui glass-primary mt-auto flex h-11 shrink-0 items-center justify-center rounded-2xl text-[13px] font-bold uppercase tracking-[0.18em] text-primary-foreground transition-transform active:scale-[0.98]"
         >
           Register Now
         </a>
