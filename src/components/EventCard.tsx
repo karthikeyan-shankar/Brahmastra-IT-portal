@@ -1,4 +1,6 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import type { BrahmastraEvent } from "@/data/events";
+import { PixelCard } from "@/components/PixelCard";
 
 export function EventCard({ event, index }: { event: BrahmastraEvent; index: number }) {
   return (
