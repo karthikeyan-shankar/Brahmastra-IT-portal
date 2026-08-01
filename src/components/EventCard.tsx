@@ -25,7 +25,7 @@ export function EventCard({ event, index }: { event: BrahmastraEvent; index: num
             </span>
           </div>
 
-          <dl className="mt-4 grid grid-cols-3 gap-2 text-center shrink-0">
+          <dl className="mt-5 mb-6 grid grid-cols-3 gap-2 text-center shrink-0">
             {[
               ["Team", event.team],
               ["Time", event.duration],
