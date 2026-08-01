@@ -226,10 +226,6 @@ export function PixelCard({
       data-glass
       onMouseEnter={() => handleAnimation("appear")}
       onMouseLeave={() => handleAnimation("disappear")}
-      onPointerDown={() => handleAnimation("appear")}
-      onPointerUp={() => handleAnimation("disappear")}
-      onPointerCancel={() => handleAnimation("disappear")}
-      onPointerLeave={() => handleAnimation("disappear")}
       onFocus={
         finalNoFocus
           ? undefined

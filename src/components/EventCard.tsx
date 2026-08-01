@@ -49,9 +49,9 @@ export function EventCard({ event, index }: { event: BrahmastraEvent; index: num
         </div>
       </PixelCard>
 
-      <DialogContent className="panel sweep-host border-accent/30 bg-black/90 text-white sm:max-w-md backdrop-blur-xl">
+      <DialogContent className="panel sweep-host border-accent/30 bg-black/95 text-white w-[92vw] max-w-md rounded-3xl p-5 sm:p-6 backdrop-blur-xl mx-auto overflow-y-auto max-h-[85vh]">
         <DialogHeader>
-          <DialogTitle className="text-astra text-3xl uppercase tracking-widest">{event.name}</DialogTitle>
+          <DialogTitle className="text-astra text-2xl sm:text-3xl uppercase tracking-widest">{event.name}</DialogTitle>
         </DialogHeader>
 
         <div className="mt-2">
