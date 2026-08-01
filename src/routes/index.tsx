@@ -54,9 +54,11 @@ function Index() {
           <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">
             Chettinad College of Engineering &amp; Technology
           </p>
-          <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.42em] text-accent">
-            Department of Information Technology
-          </p>
+          <div className="mx-auto mt-4 mb-1 w-fit rounded-full border border-accent/50 bg-accent/20 px-5 py-2 backdrop-blur-md shadow-[0_0_30px_rgba(255,255,255,0.15)]">
+            <h2 className="text-sm font-black uppercase tracking-[0.25em] text-white sm:text-base drop-shadow-md">
+              Department of Information Technology
+            </h2>
+          </div>
           <h1 className="text-astra mt-4 text-6xl uppercase leading-[0.9] tracking-[0.14em] sm:text-8xl">
             Brahmastra
           </h1>
