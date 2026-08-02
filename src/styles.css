@@ -42,7 +42,6 @@
   --font-ui:
     -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", system-ui,
     sans-serif;
-  --font-signature: "Cedarville Cursive", cursive;
 }
 
 :root {
@@ -691,11 +690,7 @@
   }
 }
 
-@utility anim-signature {
+@utility anim-reveal-right {
   display: inline-block;
-  animation: sign-draw 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
-
-@utility text-signature {
-  font-family: var(--font-signature);
+  animation: sign-draw 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }

@@ -59,7 +59,7 @@ function Index() {
               Department of Information Technology
             </h2>
           </div>
-          <h1 className="text-astra text-signature anim-signature mt-4 text-6xl leading-[0.9] sm:text-8xl font-normal drop-shadow-md pb-4 pt-4">
+          <h1 className="text-astra font-display anim-reveal-right mt-4 text-6xl uppercase leading-[0.9] tracking-[0.14em] sm:text-8xl drop-shadow-md pb-4 pt-4">
             TechGen 2k26
           </h1>
           <div className="rune-rule mx-auto mt-4 w-40" />
@@ -119,7 +119,7 @@ function Index() {
       </section>
 
       <footer className="border-t border-border px-5 py-8 text-center">
-        <p className="text-signature text-3xl font-normal tracking-normal text-white drop-shadow-sm">TechGen 2k26</p>
+        <p className="font-display text-lg font-bold uppercase tracking-[0.3em] text-white">TECHGEN 2K26</p>
         <p className="mt-2 text-xs text-white/70">
           Department of Information Technology
         </p>
