@@ -458,12 +458,28 @@
   }
 }
 
+@keyframes sus-sweep-continuous {
+  0%, 15% {
+    opacity: 1;
+    transform: translate3d(-120%, 0, 0) skewX(-14deg);
+  }
+  45% {
+    opacity: 1;
+    transform: translate3d(320%, 0, 0) skewX(-14deg);
+  }
+  46%, 100% {
+    opacity: 0;
+    transform: translate3d(320%, 0, 0) skewX(-14deg);
+  }
+}
+
 @utility sweep-host {
   position: relative;
   overflow: hidden;
 }
 
-.sweep-host::before {
+.sweep-host::before,
+.sweep-continuous::before {
   content: "";
   position: absolute;
   top: 0;
@@ -486,6 +502,10 @@
 .sweep-host:is(:hover, :focus-within, :active)::before {
   opacity: 1;
   animation: sus-sweep 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sweep-continuous::before {
+  animation: sus-sweep-continuous 3s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 
@@ -639,7 +659,8 @@
     display: none;
   }
 
-  .sweep-host::before {
+  .sweep-host::before,
+  .sweep-continuous::before {
     display: none;
   }
 }
