@@ -478,6 +478,11 @@
   overflow: hidden;
 }
 
+@utility sweep-continuous {
+  position: relative;
+  overflow: hidden;
+}
+
 .sweep-host::before,
 .sweep-continuous::before {
   content: "";
