@@ -42,8 +42,8 @@ export const EVENTS: BrahmastraEvent[] = [
     formUrl: HACKATHON_FORM_URL,
   },
   {
-    id: "slidestrom",
-    name: "Slide Strom",
+    id: "slidestorm",
+    name: "Slide Storm",
     tagline: "Ideas, made crystal clear.",
     astra: "Pashupatastra",
     type: "Technical",
