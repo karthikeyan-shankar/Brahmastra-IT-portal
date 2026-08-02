@@ -431,6 +431,23 @@
   animation: astra-scan 3.2s linear infinite;
 }
 
+@keyframes modal-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px color-mix(in oklab, var(--accent) 30%, transparent), 
+                inset 0 0 10px color-mix(in oklab, var(--accent) 10%, transparent);
+    border-color: color-mix(in oklab, var(--accent) 30%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 45px color-mix(in oklab, var(--accent) 70%, transparent),
+                inset 0 0 20px color-mix(in oklab, var(--accent) 30%, transparent);
+    border-color: color-mix(in oklab, var(--accent) 80%, transparent);
+  }
+}
+
+@utility anim-modal-pulse {
+  animation: modal-glow 2.5s ease-in-out infinite;
+}
+
 /* Tap/hover "sus" sweep across a card — one transform animation, no JS. */
 @keyframes sus-sweep {
   from {
