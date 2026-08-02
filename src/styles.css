@@ -459,17 +459,21 @@
 }
 
 @keyframes sus-sweep-continuous {
-  0%, 15% {
+  0% {
+    opacity: 0;
+    transform: translate3d(-150%, 0, 0) skewX(-14deg);
+  }
+  10%, 15% {
     opacity: 1;
-    transform: translate3d(-120%, 0, 0) skewX(-14deg);
+    transform: translate3d(-150%, 0, 0) skewX(-14deg);
   }
   45% {
     opacity: 1;
-    transform: translate3d(320%, 0, 0) skewX(-14deg);
+    transform: translate3d(400%, 0, 0) skewX(-14deg);
   }
   46%, 100% {
     opacity: 0;
-    transform: translate3d(320%, 0, 0) skewX(-14deg);
+    transform: translate3d(400%, 0, 0) skewX(-14deg);
   }
 }
 
@@ -664,8 +668,7 @@
     display: none;
   }
 
-  .sweep-host::before,
-  .sweep-continuous::before {
+  .sweep-host::before {
     display: none;
   }
 }
