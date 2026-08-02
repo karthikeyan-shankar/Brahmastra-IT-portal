@@ -4,6 +4,7 @@ import { EventCard } from "@/components/EventCard";
 
 
 import { EVENTS } from "@/data/events";
+import { ScrambleText } from "@/components/ScrambleText";
 import { useGlassProximity } from "@/hooks/useGlassProximity";
 
 export const Route = createFileRoute("/")({
@@ -59,8 +60,8 @@ function Index() {
               Department of Information Technology
             </h2>
           </div>
-          <h1 className="text-astra font-display anim-reveal-right mt-4 text-6xl uppercase leading-[0.9] tracking-[0.14em] sm:text-8xl drop-shadow-md pb-4 pt-4">
-            TechGen 2k26
+          <h1 className="text-astra font-display mt-4 text-6xl uppercase leading-[0.9] tracking-[0.14em] sm:text-8xl drop-shadow-md pb-4 pt-4">
+            <ScrambleText text="TechGen 2k26" />
           </h1>
           <div className="rune-rule mx-auto mt-4 w-40" />
           <p className="mx-auto mt-4 max-w-md text-base text-white/80">
