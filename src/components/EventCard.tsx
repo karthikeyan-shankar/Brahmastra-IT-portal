@@ -25,15 +25,14 @@ export function EventCard({ event, index }: { event: BrahmastraEvent; index: num
             </span>
           </div>
 
-          <dl className="mt-5 mb-6 grid grid-cols-3 gap-2 text-center shrink-0">
+          <dl className="mt-5 mb-6 grid grid-cols-2 gap-2 text-center shrink-0">
             {[
               ["Team", event.team],
               ["Time", event.duration],
-              ["Prize", event.prize],
-            ].map(([k, v]) => (
-              <div key={k} className="glass-soft flex h-full flex-col items-center justify-center rounded-2xl px-2 py-2">
-                <dt className="text-ui text-[11px] font-medium text-white/60">{k}</dt>
-                <dd className="text-ui mt-0.5 text-sm font-semibold leading-tight text-white">{v}</dd>
+            ].map(([label, value]) => (
+              <div key={label} className="glass-soft flex h-full flex-col items-center justify-center rounded-2xl px-2 py-2">
+                <dt className="text-ui text-[11px] font-medium text-white/60">{label}</dt>
+                <dd className="text-ui mt-0.5 text-sm font-semibold leading-tight text-white">{value}</dd>
               </div>
             ))}
           </dl>

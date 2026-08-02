@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
 
 const STATS = [
   ["04", "IT Events"],
-  ["₹0", "Prize Pool"],
+  ["Win", "Cash Prizes"],
   ["1", "Day"],
 ];
 
