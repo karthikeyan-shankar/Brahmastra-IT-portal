@@ -92,10 +92,10 @@ export const EVENTS: BrahmastraEvent[] = [
     tagline: "Design a brand that sticks.",
     astra: "Trishula",
     type: "Non-Technical",
-    team: "Team of 2-3",
+    team: "Team of 2",
     duration: "45 min",
     details: [
-      "Team of 2–3 members",
+      "Team of 2 members",
       "Duration: 45 minutes (40 minutes preparation + 5 minutes presentation)",
       "Design: Brand Name, Logo Sketch, Tagline",
       "Strategy: Target Audience, Marketing Strategy",
