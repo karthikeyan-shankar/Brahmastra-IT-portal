@@ -77,15 +77,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Brahmastra 2026 · IT Department" },
+      { title: "TechGen 2k26 · IT Department" },
       {
         name: "description",
-        content: "Department of Information Technology events at Brahmastra 2026 — hackathon, PPT, prompt engineering and brand builder.",
+        content: "Department of Information Technology events at TechGen 2k26 — hackathon, PPT, prompt engineering and brand builder.",
       },
-      { property: "og:title", content: "Brahmastra 2026 · IT Department" },
+      { property: "og:title", content: "TechGen 2k26 · IT Department" },
       {
         property: "og:description",
-        content: "Explore the IT department events at Brahmastra 2026 and register online.",
+        content: "Explore the IT department events at TechGen 2k26 and register online.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -95,7 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap",
       },
       {
         rel: "stylesheet",

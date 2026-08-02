@@ -42,7 +42,7 @@
   --font-ui:
     -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", system-ui,
     sans-serif;
-
+  --font-signature: "Caveat", cursive;
 }
 
 :root {
@@ -681,4 +681,21 @@
   .glass-soft {
     background-color: oklch(0.22 0.02 20 / 0.72);
   }
+}
+@keyframes sign-draw {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@utility anim-signature {
+  display: inline-block;
+  animation: sign-draw 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@utility text-signature {
+  font-family: var(--font-signature);
 }
