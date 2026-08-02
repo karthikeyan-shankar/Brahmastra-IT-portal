@@ -13,8 +13,11 @@ export type BrahmastraEvent = {
   formUrl: string;
 };
 
-/** Placeholder — replace with the real Google Form link when you have it. */
-export const REGISTRATION_FORM_URL = "https://forms.gle/your-google-form-link";
+/** Placeholder for Hackathon until a separate link is provided. */
+export const HACKATHON_FORM_URL = "https://forms.gle/your-google-form-link";
+
+/** The registration form for all other events. */
+export const GENERAL_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfIyx5kFxA78mDyjZIMzrNL_kORYOcMjNF3-5pJd-6pln2yww/viewform?usp=publish-editor";
 
 export const EVENTS: BrahmastraEvent[] = [
   {
@@ -36,7 +39,7 @@ export const EVENTS: BrahmastraEvent[] = [
       "Boomika S – 8124896874"
     ],
     color: "#D62839",
-    formUrl: REGISTRATION_FORM_URL,
+    formUrl: HACKATHON_FORM_URL,
   },
   {
     id: "slidestrom",
@@ -59,7 +62,7 @@ export const EVENTS: BrahmastraEvent[] = [
       "Sanjaykumar K – 9345989768"
     ],
     color: "#06b6d4",
-    formUrl: REGISTRATION_FORM_URL,
+    formUrl: GENERAL_FORM_URL,
   },
   {
     id: "promptmasters",
@@ -81,7 +84,7 @@ export const EVENTS: BrahmastraEvent[] = [
       "Dharunkumar P – 6369421341"
     ],
     color: "#f97316",
-    formUrl: REGISTRATION_FORM_URL,
+    formUrl: GENERAL_FORM_URL,
   },
   {
     id: "brandsprints",
@@ -102,6 +105,6 @@ export const EVENTS: BrahmastraEvent[] = [
       "Sainthavi S – 7806824136"
     ],
     color: "#6366f1",
-    formUrl: REGISTRATION_FORM_URL,
+    formUrl: GENERAL_FORM_URL,
   },
 ];
