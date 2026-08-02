@@ -463,15 +463,15 @@
     opacity: 0;
     transform: translate3d(-150%, 0, 0) skewX(-14deg);
   }
-  10%, 15% {
+  5%, 10% {
     opacity: 1;
     transform: translate3d(-150%, 0, 0) skewX(-14deg);
   }
-  45% {
+  70% {
     opacity: 1;
     transform: translate3d(400%, 0, 0) skewX(-14deg);
   }
-  46%, 100% {
+  71%, 100% {
     opacity: 0;
     transform: translate3d(400%, 0, 0) skewX(-14deg);
   }
@@ -514,7 +514,7 @@
 }
 
 .sweep-continuous::before {
-  animation: sus-sweep-continuous 3s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation: sus-sweep-continuous 1.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 
