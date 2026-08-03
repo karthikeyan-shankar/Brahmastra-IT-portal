@@ -6,6 +6,8 @@ import { EventCard } from "@/components/EventCard";
 import { EVENTS } from "@/data/events";
 import { useGlassProximity } from "@/hooks/useGlassProximity";
 
+import { CursorGrid } from "@/components/CursorGrid";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -44,6 +46,7 @@ function Index() {
       <div className="aurora-drift pointer-events-none absolute inset-0 -z-30" />
       <div className="starfield pointer-events-none absolute inset-0 -z-20" />
       <div className="grid-circuit pointer-events-none absolute inset-0 -z-10" />
+      <CursorGrid color="#06b6d4" />
 
 
       {/* Hero */}
