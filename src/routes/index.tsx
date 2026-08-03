@@ -98,6 +98,17 @@ function Index() {
             View Events
           </a>
         </div>
+
+        <div
+          className="anim-rise relative mt-16 w-full max-w-4xl px-4"
+          style={{ animationDelay: "300ms" }}
+        >
+          <img
+            src="/poster.jpg"
+            alt="TechGen 2k26 Official Poster"
+            className="h-auto w-full rounded-2xl border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]"
+          />
+        </div>
       </section>
 
       {/* Events */}
