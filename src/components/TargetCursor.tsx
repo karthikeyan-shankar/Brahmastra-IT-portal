@@ -70,8 +70,8 @@ export const TargetCursor = ({
 
   const constants = useMemo(
     () => ({
-      borderWidth: 4,
-      cornerSize: 20
+      borderWidth: 3,
+      cornerSize: 14
     }),
     []
   );
