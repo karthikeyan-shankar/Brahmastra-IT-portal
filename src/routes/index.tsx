@@ -68,6 +68,9 @@ function Index() {
             The IT department wing of TechGen 2k26 — four events, two technical,
             one non-technical and one flagship hackathon. Register per event.
           </p>
+          <div className="mx-auto mt-8 w-full max-w-3xl overflow-hidden rounded-2xl border border-white/20 shadow-[0_0_40px_rgba(255,255,255,0.1)] transition-transform hover:scale-[1.02] duration-500">
+            <img src="/poster.jpg" alt="TechGen 2k26 Poster" className="w-full h-auto object-cover" />
+          </div>
         </div>
 
 
