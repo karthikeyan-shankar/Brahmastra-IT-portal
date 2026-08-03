@@ -14,25 +14,25 @@ export function EventCard({ event, index }: { event: BrahmastraEvent; index: num
           <div className="anim-scan h-full w-1/3 bg-gradient-to-r from-transparent via-accent to-transparent" />
         </div>
 
-        <div className="p-4 sm:p-5 flex flex-col flex-1">
-          <div className="flex items-start justify-between gap-3 shrink-0">
+        <div className="p-6 sm:p-8 flex flex-col flex-1">
+          <div className="flex items-start justify-between gap-4 shrink-0">
             <div className="min-w-0">
-              <h3 className="truncate text-2xl tracking-wide text-white">{event.name}</h3>
-              <p className="text-ui mt-0.5 text-[15px] leading-snug text-white/70">{event.tagline}</p>
+              <h3 className="truncate text-3xl tracking-wide text-white">{event.name}</h3>
+              <p className="text-ui mt-1.5 text-base leading-snug text-white/70">{event.tagline}</p>
             </div>
-            <span className="text-ui shrink-0 glass-soft rounded-full px-2.5 py-1 text-[11px] font-semibold text-white/90">
+            <span className="text-ui shrink-0 glass-soft rounded-full px-3 py-1.5 text-xs font-semibold text-white/90">
               {event.type}
             </span>
           </div>
 
-          <dl className="mt-5 mb-6 grid grid-cols-2 gap-2 text-center shrink-0">
+          <dl className="mt-8 mb-8 grid grid-cols-2 gap-4 text-center shrink-0">
             {[
               ["Team", event.team],
               ["Time", event.duration],
             ].map(([label, value]) => (
-              <div key={label} className="glass-soft flex h-full flex-col items-center justify-center rounded-2xl px-2 py-2">
-                <dt className="text-ui text-[11px] font-medium text-white/60">{label}</dt>
-                <dd className="text-ui mt-0.5 text-sm font-semibold leading-tight text-white">{value}</dd>
+              <div key={label} className="glass-soft flex h-full flex-col items-center justify-center rounded-2xl px-4 py-3">
+                <dt className="text-ui text-xs font-medium text-white/60">{label}</dt>
+                <dd className="text-ui mt-1 text-base font-semibold leading-tight text-white">{value}</dd>
               </div>
             ))}
           </dl>
@@ -40,7 +40,7 @@ export function EventCard({ event, index }: { event: BrahmastraEvent; index: num
           <DialogTrigger asChild>
             <button
               type="button"
-              className="text-ui glass-soft mt-auto flex h-11 shrink-0 items-center justify-center rounded-2xl text-[13px] font-bold uppercase tracking-[0.18em] text-white transition-transform hover:bg-white/10 active:scale-[0.98]"
+              className="text-ui glass-soft mt-auto flex h-14 shrink-0 items-center justify-center rounded-2xl text-[14px] font-bold uppercase tracking-[0.18em] text-white transition-transform hover:bg-white/10 active:scale-[0.98]"
             >
               View Details
             </button>

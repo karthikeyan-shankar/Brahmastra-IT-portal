@@ -97,17 +97,16 @@ function Index() {
       </section>
 
       {/* Events */}
-      <section id="events" className="px-4 pb-16 sm:px-6">
-        <header className="mx-auto mb-6 max-w-5xl text-center">
+      <section id="events" className="px-4 pb-20 sm:px-6">
+        <header className="mx-auto mb-12 max-w-5xl text-center">
           <h2 className="text-astra text-4xl uppercase sm:text-5xl">IT Department Events</h2>
-          <div className="rune-rule mx-auto mt-3 w-28" />
-          <p className="mt-3 text-sm text-white/80">
+          <div className="rune-rule mx-auto mt-5 w-28" />
+          <p className="mt-5 text-base text-white/80">
             Tap any event to read its rules, then register for it.
           </p>
         </header>
 
-
-        <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-6xl gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-2">
           {EVENTS.map((e, i) => (
             <EventCard key={e.id} event={e} index={i} />
           ))}
