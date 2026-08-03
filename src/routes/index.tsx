@@ -104,7 +104,7 @@ function Index() {
           style={{ animationDelay: "300ms" }}
         >
           <img
-            src="/poster-crimson.jpg"
+            src="/poster-blue.jpg"
             alt="TechGen 2k26 Official Poster"
             className="h-auto w-full rounded-2xl border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]"
           />
