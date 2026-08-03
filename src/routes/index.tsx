@@ -4,7 +4,6 @@ import { EventCard } from "@/components/EventCard";
 
 
 import { EVENTS } from "@/data/events";
-import { ScrambleText } from "@/components/ScrambleText";
 import { useGlassProximity } from "@/hooks/useGlassProximity";
 
 export const Route = createFileRoute("/")({
@@ -55,18 +54,13 @@ function Index() {
           <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">
             Chettinad College of Engineering &amp; Technology
           </p>
-          <div className="mx-auto mt-4 mb-1 w-fit rounded-full border border-accent/50 bg-accent/20 px-5 py-2 backdrop-blur-md shadow-[0_0_30px_rgba(255,255,255,0.15)]">
-            <h2 className="text-sm font-black uppercase tracking-[0.25em] text-white sm:text-base drop-shadow-md">
-              Department of Information Technology
-            </h2>
-          </div>
-          <h1 className="text-astra font-display mt-4 text-6xl uppercase leading-[0.9] tracking-[0.14em] sm:text-8xl drop-shadow-md pb-4 pt-4">
-            <ScrambleText text="TechGen 2k26" />
+          <h1 className="text-astra font-display mt-6 text-4xl uppercase leading-[1.2] tracking-[0.05em] sm:text-6xl drop-shadow-xl pb-4 pt-4">
+            Department of<br />
+            <span className="text-plasma">Information Technology</span>
           </h1>
           <div className="rune-rule mx-auto mt-4 w-40" />
           <p className="mx-auto mt-4 max-w-md text-base text-white/80">
-            The IT department wing of TechGen 2k26 — four events, two technical,
-            one non-technical and one flagship hackathon. Register per event.
+            Four events — two technical, one non-technical, and one flagship hackathon. Register per event.
           </p>
         </div>
 
@@ -99,16 +93,7 @@ function Index() {
           </a>
         </div>
 
-        <div
-          className="anim-rise relative mt-16 w-full max-w-4xl px-4"
-          style={{ animationDelay: "300ms" }}
-        >
-          <img
-            src="/poster-blue.jpg"
-            alt="TechGen 2k26 Official Poster"
-            className="h-auto w-full rounded-2xl border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]"
-          />
-        </div>
+
       </section>
 
       {/* Events */}
