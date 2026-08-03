@@ -38,7 +38,7 @@ export const EVENTS: BrahmastraEvent[] = [
       "Karthikeyan S – 9159659284",
       "Boomika S – 8124896874"
     ],
-    color: "#D62839",
+    color: "#ffffff",
     formUrl: HACKATHON_FORM_URL,
   },
   {
@@ -61,7 +61,7 @@ export const EVENTS: BrahmastraEvent[] = [
       "Akshayaa C V – 9791222623",
       "Sanjaykumar K – 9345989768"
     ],
-    color: "#06b6d4",
+    color: "#a3a3a3",
     formUrl: GENERAL_FORM_URL,
   },
   {
@@ -83,7 +83,7 @@ export const EVENTS: BrahmastraEvent[] = [
       "Narenkumar A – 6383118525",
       "Dharunkumar P – 6369421341"
     ],
-    color: "#f97316",
+    color: "#a3a3a3",
     formUrl: GENERAL_FORM_URL,
   },
   {
@@ -104,7 +104,7 @@ export const EVENTS: BrahmastraEvent[] = [
       "Harini S – 7825899732",
       "Sainthavi S – 7806824136"
     ],
-    color: "#6366f1",
+    color: "#737373",
     formUrl: GENERAL_FORM_URL,
   },
 ];

@@ -55,23 +55,24 @@
   --popover: oklch(0 0 0 / 0.94);
   --popover-foreground: oklch(0.98 0.004 20);
 
-  --primary: oklch(0.58 0.20 25);
-  --primary-foreground: oklch(0.99 0.005 20);
+  --primary: oklch(0.85 0 0); /* light gray */
+  --primary-foreground: oklch(0.10 0 0);
   --secondary: oklch(1 0 0 / 0.10);
-  --secondary-foreground: oklch(0.98 0.004 20);
+  --secondary-foreground: oklch(0.98 0 0);
   --muted: oklch(1 0 0 / 0.08);
-  --muted-foreground: oklch(0.85 0.012 20);
-  --accent: oklch(0.82 0.12 34);
-  --accent-foreground: oklch(0.17 0.01 20);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: oklch(0.85 0 0);
+  --accent-foreground: oklch(0.10 0 0);
   --destructive: oklch(0.58 0.20 25);
-  --destructive-foreground: oklch(0.99 0.005 20);
+  --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(1 0 0 / 0.14);
   --input: oklch(1 0 0 / 0.14);
-  --ring: oklch(0.82 0.12 34);
+  --ring: oklch(0.85 0 0);
 
-  --ember: oklch(0.60 0.20 25);
-  --plasma: oklch(0.84 0.11 34);
-  --astra: oklch(0.72 0.17 28);
+  /* Replaced crimson/orange with monochrome/silver/black tones */
+  --ember: oklch(0.3 0 0); /* dark gray / soft black */
+  --plasma: oklch(0.8 0 0); /* light gray / silver */
+  --astra: oklch(0.9 0 0); /* near white */
 
   --gradient-astra: linear-gradient(115deg, var(--plasma), oklch(0.98 0.01 40) 42%, var(--ember));
   --gradient-void:
