@@ -5,8 +5,7 @@ import { EventCard } from "@/components/EventCard";
 
 import { EVENTS } from "@/data/events";
 import { useGlassProximity } from "@/hooks/useGlassProximity";
-
-import { CursorGrid } from "@/components/CursorGrid";
+import { TargetCursor } from "@/components/TargetCursor";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,18 +45,18 @@ function Index() {
       <div className="aurora-drift pointer-events-none absolute inset-0 -z-30" />
       <div className="starfield pointer-events-none absolute inset-0 -z-20" />
       <div className="grid-circuit pointer-events-none absolute inset-0 -z-10" />
-      <CursorGrid color="#06b6d4" />
+      <TargetCursor cursorColor="#06b6d4" cursorColorOnTarget="#D946EF" />
 
 
       {/* Hero */}
       <section className="relative flex flex-col items-center px-5 pb-14 pt-16 text-center">
         <AstraSigil className="absolute -top-4 h-[22rem] w-[22rem] opacity-70 sm:h-[26rem] sm:w-[26rem]" />
 
-        <div className="relative anim-rise">
+        <div className="relative anim-rise inline-block">
           <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">
             Chettinad College of Engineering &amp; Technology
           </p>
-          <h1 className="text-astra font-display mt-6 text-4xl uppercase leading-[1.2] tracking-[0.05em] sm:text-6xl drop-shadow-xl pb-4 pt-4">
+          <h1 className="text-astra font-display cursor-target mt-6 text-4xl uppercase leading-[1.2] tracking-[0.05em] sm:text-6xl drop-shadow-xl pb-4 pt-4 px-6 inline-block rounded-xl transition-all duration-300">
             Department of<br />
             <span className="text-plasma">Information Technology</span>
           </h1>
