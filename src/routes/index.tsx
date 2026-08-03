@@ -6,6 +6,7 @@ import { EventCard } from "@/components/EventCard";
 import { EVENTS } from "@/data/events";
 import { useGlassProximity } from "@/hooks/useGlassProximity";
 import { TargetCursor } from "@/components/TargetCursor";
+import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,7 +47,6 @@ function Index() {
       <div className="starfield pointer-events-none absolute inset-0 -z-20" />
       <div className="grid-circuit pointer-events-none absolute inset-0 -z-10" />
       <TargetCursor cursorColor="#ffffff" cursorColorOnTarget="#ffffff" targetSelector=".cursor-target, button, a" />
-
 
       {/* Hero */}
       <section className="relative flex flex-col items-center px-5 pb-14 pt-16 text-center">
@@ -116,16 +116,8 @@ function Index() {
 
       </section>
 
-      <footer className="border-t border-border px-5 py-8 text-center">
-        <p className="font-display text-lg font-bold uppercase tracking-[0.3em] text-white">TECHGEN 2K26</p>
-        <p className="mt-2 text-xs text-white/70">
-          Department of Information Technology
-        </p>
-        <p className="mt-1 text-xs text-white/50">
-          Chettinad College of Engineering &amp; Technology
-        </p>
-      </footer>
-
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }
