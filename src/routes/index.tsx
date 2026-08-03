@@ -45,7 +45,7 @@ function Index() {
       <div className="aurora-drift pointer-events-none absolute inset-0 -z-30" />
       <div className="starfield pointer-events-none absolute inset-0 -z-20" />
       <div className="grid-circuit pointer-events-none absolute inset-0 -z-10" />
-      <TargetCursor cursorColor="#06b6d4" cursorColorOnTarget="#D946EF" />
+      <TargetCursor cursorColor="#ffffff" cursorColorOnTarget="#ffffff" />
 
 
       {/* Hero */}
